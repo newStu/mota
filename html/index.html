@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        #girl {
+            width: 32px;
+            height: 48px;
+            background-image: url(../src/assets/map/girl.png);
+            background-position-x: 0px;
+            animation-name: NPCActive;
+            animation-duration: 950ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(1, start);
+        }
+
+        #girl.left {
+            background-position-y: -48px;
+        }
+
+        #girl.right {
+            background-position-y: -96px;
+        }
+
+        #girl.down {
+            background-position-y: 0px;
+        }
+
+        #girl.up {
+            background-position-y: 48px;
+        }
+
+
+        @keyframes NPCActive {
+            25% {
+                background-position-x: 0px;
+            }
+
+            50% {
+                background-position-x: -32px;
+            }
+
+            75% {
+                background-position-x: -64px;
+            }
+
+            100% {
+                background-position-x: -96px;
+            }
+        }
+
+
+
+        .npc {
+            width: 32px;
+            height: 32px;
+            background-image: url(../src/assets/map/hero.png);
+            background-position-x: 0px;
+            animation-name: NPCActive;
+            animation-duration: 950ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(1, start);
+        }
+
+        #princess {
+            background-image: url(../src/assets/map/princess.png);
+        }
+
+        #spirit {
+            background-image: url(../src/assets/map/spirit.png);
+        }
+
+        #demon {
+            background-image: url(../src/assets/map/demon.png);
+        }
+
+        .npc.left {
+            background-position-y: -32px;
+        }
+
+        .npc.right {
+            background-position-y: -64px;
+        }
+
+        .npc.down {
+            background-position-y: 0px;
+        }
+
+        .npc.up {
+            background-position-y: 32px;
+        }
+
+
+        #dragon,
+        #octopus {
+            width: 96px;
+            height: 96px;
+            background-image: url(../src/assets/map/dragon.png);
+            background-position-x: 0px;
+            animation-name: dragonActive;
+            animation-duration: 950ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(1, start);
+        }
+
+        #octopus {
+            background-image: url(../src/assets/map/octopus.png);
+        }
+
+
+
+        #dragon.left,
+        #octopus.left {
+            background-position-y: -96px;
+        }
+
+        #dragon.right,
+        #octopus.right {
+            background-position-y: -192px;
+        }
+
+        #dragon.down,
+        #octopus.down {
+            background-position-y: 0px;
+        }
+
+        #dragon.up,
+        #octopus.up {
+            background-position-y: 96px;
+        }
+
+        @keyframes dragonActive {
+            25% {
+                background-position-x: 0px;
+            }
+
+            50% {
+                background-position-x: -96px;
+            }
+
+            75% {
+                background-position-x: -192px;
+            }
+
+            100% {
+                background-position-x: -384px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="girl" class="down"></div>
+    <div id="dragon" class="down"></div>
+    <div id="octopus" class="down"></div>
+    <div id="hero" class="npc down"></div>
+    <div id="princess" class="npc down"></div>
+    <div id="spirit" class="npc down"></div>
+    <div id="demon" class="npc down"></div>
+
+
+
+    <button id="runDown">前</button>
+    <button id="runUp">后</button>
+    <button id="runLeft">左</button>
+    <button id="runRight">右</button>
+    <script>
+        const girl = document.getElementById("girl");
+        const hero = document.getElementById("hero");
+        const dragon = document.getElementById("dragon");
+        const octopus = document.getElementById("octopus");
+        const princess = document.getElementById("princess");
+        const spirit = document.getElementById("spirit");
+        const demon = document.getElementById("demon");
+
+
+
+        const elements = [girl, dragon, octopus, hero, princess, spirit, demon];
+
+        function setClassName(className) {
+            elements.forEach(item => {
+                if (princess.classList.contains("npc")) {
+                    className += " npc"
+                }
+                item.setAttribute("class", className);
+            })
+        }
+
+        document.getElementById("runUp").addEventListener("click", () => {
+            setClassName("up")
+        })
+
+        document.getElementById("runLeft").addEventListener("click", () => {
+            setClassName("left")
+        })
+
+        document.getElementById("runDown").addEventListener("click", () => {
+            setClassName("down")
+        })
+
+        document.getElementById("runRight").addEventListener("click", () => {
+            setClassName("right")
+        })
+
+
+    </script>
+</body>
+
+</html>

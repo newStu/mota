@@ -1,0 +1,7 @@
+export enum NPCTiles {
+  SPIRIT = "NSRT1",
+  MERCHANT_MIN_EXP = "NMME1",
+  MERCHANT_EXP = "NME1",
+  MERCHANT_KEY = "NMK1",
+  THIEF = "NTH1",
+}

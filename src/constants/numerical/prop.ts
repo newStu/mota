@@ -1,0 +1,36 @@
+import { PropTiles, type PropProperty } from "../id";
+
+// 红: 200  蓝: 500
+export const PropNumerical: { [key in PropTiles]: PropProperty } = {
+  [PropTiles.GEMSTONE_RED]: { Name: "红宝石", ATK: 3 },
+  [PropTiles.GEMSTONE_BLUE]: { Name: "蓝宝石", DEF: 3 },
+  [PropTiles.GEMSTONE_GREEN]: { Name: "绿宝石", ATK: 3, DEF: 3 },
+  [PropTiles.KEY_RED]: { Name: "红钥匙", [PropTiles.KEY_RED]: 1 },
+  [PropTiles.KEY_BLUE]: { Name: "蓝钥匙", [PropTiles.KEY_BLUE]: 1 },
+  [PropTiles.KEY_YELLOW]: { Name: "黄钥匙", [PropTiles.KEY_RED]: 1 },
+  [PropTiles.DRUG_MINI]: { Name: "小型回复药水", HP: 200 },
+  [PropTiles.DRUG]: { Name: "回复药水", HP: 500 },
+  [PropTiles.DRUG_MIDDLE]: { Name: "中型回复药水", HP: 1000 },
+  [PropTiles.DRUG_MAX]: { Name: "大型回复药水", HP: 10000 },
+  [PropTiles.BOOK]: { Name: "怪物图鉴", _hasBook: true },
+  [PropTiles.SWORD]: { Name: "剑", ATK: 10 },
+  [PropTiles.SWORD_BIG]: { Name: "大剑", ATK: 20 },
+  [PropTiles.SWORD_GOD]: { Name: "神剑", ATK: 30 },
+  [PropTiles.SHIELD]: { Name: "盾", DEF: 10 },
+  [PropTiles.SHIELD_BIG]: { Name: "大盾", DEF: 20 },
+  [PropTiles.SHIELD_GOD]: { Name: "神盾", DEF: 30 },
+  [PropTiles.KEY_BAG]: {
+    Name: "钥匙包",
+    [PropTiles.KEY_RED]: 1,
+    [PropTiles.KEY_BLUE]: 1,
+    [PropTiles.KEY_YELLOW]: 1,
+  },
+  [PropTiles.COIN_GOLD]: { Name: "金币", Gold: 300 },
+  [PropTiles.COIN_SILVER]: { Name: "银币", Gold: 100 },
+  [PropTiles.LEVEL_1]: { Name: "初级小飞翼", Level: 1 },
+  [PropTiles.LEVEL_2]: { Name: "小飞翼", Level: 2 },
+  [PropTiles.LEVEL_3]: { Name: "高级飞翼", Level: 3 },
+  [PropTiles.COMPASS]: { Name: "罗盘", _hasCompass: true },
+  [PropTiles.PICKAXE]: { Name: "宝石镐", _hasPickaxe: true },
+  [PropTiles.CROSS]: { Name: "十字架", _hasCross: true },
+};

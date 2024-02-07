@@ -1,0 +1,166 @@
+{
+    "root": {
+        "data": {
+            "id": "cybp46rswls0",
+            "created": 1704957848538,
+            "text": "魔塔"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cybp4byfoc80",
+                    "created": 1704957859823,
+                    "text": "地图元素",
+                    "layout_mind_offset": {
+                        "x": -22.999999634424853,
+                        "y": -34.99999944369006
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cybp970zbow0",
+                            "created": 1704958240914,
+                            "text": "id"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp9a1bh9c0",
+                                    "created": 1704958247465,
+                                    "text": "判断元素是什么"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp5j6blbs0",
+                            "created": 1704957953902,
+                            "text": "x"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp76fino80",
+                                    "created": 1704958082888,
+                                    "text": "x轴位置"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp5l8owtk0",
+                            "created": 1704957958399,
+                            "text": "y"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp72gnf3s0",
+                                    "created": 1704958074249,
+                                    "text": "y轴位置"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp6e7j0i00",
+                            "created": 1704958021455,
+                            "text": "active"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp6xcytlc0",
+                                    "created": 1704958063143,
+                                    "text": "是否可交互"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cybpbmwo8rs0",
+                                            "created": 1704958432211,
+                                            "text": "false: 不可交互"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cybpbspgweo0",
+                                            "created": 1704958444836,
+                                            "text": "true: 可交互"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp5ml8tqo0",
+                            "created": 1704957961335,
+                            "text": "isActive(x, y)"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp6pupflc0",
+                                    "created": 1704958046801,
+                                    "text": "是否为可交互状态"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cybp4ormly80",
+                    "created": 1704957887710,
+                    "text": "道具",
+                    "layout_mind_offset": {
+                        "x": 4.999999920527102,
+                        "y": 35.99999942779556
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cybp4fea85s0",
+                    "created": 1704957867312,
+                    "text": "角色",
+                    "layout_mind_offset": {
+                        "x": -14.999999761581478,
+                        "y": -29.999999523162955
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cybp4h6fwmw0",
+                    "created": 1704957871191,
+                    "text": "商店",
+                    "layout_mind_offset": {
+                        "x": -14.999999761581392,
+                        "y": 18.99999969800325
+                    }
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "classic-compact",
+    "version": "1.4.43"
+}

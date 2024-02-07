@@ -1,0 +1,475 @@
+{
+    "root": {
+        "data": {
+            "id": "cybozvnrc0g0",
+            "created": 1704957510893,
+            "text": "魔塔",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cybp0l1pzfc0",
+                    "created": 1704957566156,
+                    "text": "商店",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cybp0l1pluo0",
+                            "created": 1704957566156,
+                            "text": "普通商店",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1q73s0",
+                            "created": 1704957566157,
+                            "text": "高级商店",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cybp0l1qb000",
+                    "created": 1704957566157,
+                    "text": "角色",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cybp0l1qaf40",
+                            "created": 1704957566157,
+                            "text": "怪物",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1qktc0",
+                                    "created": 1704957566157,
+                                    "text": "史莱姆",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1q2tc0",
+                                    "created": 1704957566157,
+                                    "text": "蝙蝠",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp3kzfg940",
+                                    "created": 1704957801110,
+                                    "text": "...."
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1q2n40",
+                            "created": 1704957566157,
+                            "text": "英雄",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1qj2w0",
+                            "created": 1704957566157,
+                            "text": "精灵",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1q1iw0",
+                            "created": 1704957566157,
+                            "text": "小偷",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1q9cw0",
+                            "created": 1704957566157,
+                            "text": "商贩",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1q6600",
+                                    "created": 1704957566157,
+                                    "text": "卖钥匙商贩",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1q3s00",
+                                    "created": 1704957566157,
+                                    "text": "买钥匙商贩",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1q9i80",
+                                    "created": 1704957566157,
+                                    "text": "经验商贩",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cybp0l1qm000",
+                    "created": 1704957566157,
+                    "text": "地图元素",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cybp0l1r06o0",
+                            "created": 1704957566158,
+                            "text": "墙",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1r5z40",
+                                    "created": 1704957566158,
+                                    "text": "普通墙",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1qwpk0",
+                                    "created": 1704957566158,
+                                    "text": "可破墙体",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1qrr40",
+                            "created": 1704957566158,
+                            "text": "水",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1r7ts0",
+                            "created": 1704957566158,
+                            "text": "熔岩",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1r0o00",
+                            "created": 1704957566158,
+                            "text": "冰块",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1r2hs0",
+                            "created": 1704957566158,
+                            "text": "地面",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1r7kg0",
+                            "created": 1704957566158,
+                            "text": "门",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1quh40",
+                                    "created": 1704957566158,
+                                    "text": "木门",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1r6pc0",
+                                    "created": 1704957566158,
+                                    "text": "铁门",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1r2eg0",
+                                    "created": 1704957566158,
+                                    "text": "特殊门",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybpwrvexhk0",
+                            "created": 1704960088666,
+                            "text": "楼梯"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybpwwyrgvc0",
+                                    "created": 1704960099752,
+                                    "text": "上"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybpwy3kw000",
+                                    "created": 1704960102220,
+                                    "text": "下"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cybp0l1o23k0",
+                    "created": 1704957566153,
+                    "text": "道具",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cybp0l1nzs00",
+                            "created": 1704957566153,
+                            "text": "回血瓶",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1no140",
+                                    "created": 1704957566153,
+                                    "text": "红色",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1nq540",
+                                    "created": 1704957566153,
+                                    "text": "蓝色",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1oa800",
+                                    "created": 1704957566154,
+                                    "text": "绿色",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1ol2w0",
+                            "created": 1704957566154,
+                            "text": "钥匙",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1ooco0",
+                                    "created": 1704957566154,
+                                    "text": "黄色",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1om1c0",
+                                    "created": 1704957566154,
+                                    "text": "蓝色",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1o9ew0",
+                                    "created": 1704957566154,
+                                    "text": "红色",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1oigo0",
+                            "created": 1704957566154,
+                            "text": "宝石",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1pb6o0",
+                                    "created": 1704957566155,
+                                    "text": "攻击宝石",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1pfiw0",
+                                    "created": 1704957566155,
+                                    "text": "防御宝石",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1owf40",
+                            "created": 1704957566155,
+                            "text": "武器",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1ovs00",
+                                    "created": 1704957566155,
+                                    "text": "剑",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1p5bs0",
+                                    "created": 1704957566155,
+                                    "text": "盾",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1ptt40",
+                            "created": 1704957566156,
+                            "text": "镐",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cybp0l1pykw0",
+                                    "created": 1704957566156,
+                                    "text": "破墙镐",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cybp0l1pkdc0",
+                                    "created": 1704957566156,
+                                    "text": "破冰镐",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1pjko0",
+                            "created": 1704957566156,
+                            "text": "怪物宝典",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cybp0l1ptvk0",
+                            "created": 1704957566156,
+                            "text": "飞行器",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "classic-compact",
+    "version": "1.4.43"
+}

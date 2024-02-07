@@ -1,0 +1,46 @@
+.base-animation {
+  background-position-x: 0px;
+  animation-duration: 950ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1, start);
+
+  &.once {
+    animation-duration: 600ms;
+    animation-iteration-count: 1;
+  }
+}
+
+@for $i from 32 through 46 {
+  @each $width, $height in ($i, $i), ($i * 3, $i), ($i * 3, $i * 3) {
+    .w#{$width}-h#{$height} {
+      width: #{$width}px;
+      height: #{$height}px;
+    }
+
+    .background-size-#{$width} {
+      background-size: #{$width * 4}px, #{$height * 4}px;
+    }
+
+    .animation-name-#{$width} {
+      animation-name: animation#{$width};
+    }
+
+    @keyframes animation#{$width} {
+      25% {
+        background-position-x: 0px;
+      }
+
+      50% {
+        background-position-x: -#{$width}px;
+      }
+
+      75% {
+        background-position-x: -#{$width * 2}px;
+      }
+
+      100% {
+        background-position-x: -#{$width * 3}px;
+      }
+    }
+  }
+}
