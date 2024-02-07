@@ -12,6 +12,8 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import { RoleTiles, TilesImage } from "@/constants";
 import type { CommonProperty } from "@/element/common/CommonProperty";
 import { useHeroStore } from "@/stores/common/hero";
@@ -19,13 +21,16 @@ import { useSelectStore } from "@/stores/editMap/elementSelect";
 import type { IDType, SelectRenderType } from "@/typings/constants";
 
 defineProps<{ selectTilesList: SelectRenderType }>();
-const { activeElement, setCurrentSelectedElement } = $(useSelectStore());
-const { hero } = $(useHeroStore());
+const __$temp_1 = (useSelectStore()),
+  activeElement = toRef(__$temp_1, 'activeElement'),
+  setCurrentSelectedElement = toRef(__$temp_1, 'setCurrentSelectedElement');;
+const __$temp_2 = (useHeroStore()),
+  hero = toRef(__$temp_2, 'hero');;
 function handleChangeSelect(Element: typeof CommonProperty, id: IDType) {
     if (id === RoleTiles.HERO) {
-        setCurrentSelectedElement(hero);
+        setCurrentSelectedElement.value(hero.value);
     } else {
-        setCurrentSelectedElement(new Element());
+        setCurrentSelectedElement.value(new Element());
     }
 }
 </script>

@@ -11,6 +11,8 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import Map from "../Common/Map.vue";
 import DataPanel from "../Common/DataPanel.vue"
 import { Element, HeroElement } from "./components";
@@ -21,7 +23,8 @@ defineProps<{
     map: MapTiles[][];
     renderList: CommonProperty[];
 }>();
-const { hero } = $(useHeroStore());
+const __$temp_1 = (useHeroStore()),
+  hero = toRef(__$temp_1, 'hero');;
 </script>
 
 <style scoped>

@@ -5,10 +5,13 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import { MapTiles, TilesImage } from "@/constants";
 import { useCommonStore } from "@/stores/common/common";
 
-const { cssWidthHeight } = $(useCommonStore());
+const __$temp_1 = (useCommonStore()),
+  cssWidthHeight = toRef(__$temp_1, 'cssWidthHeight');;
 </script>
 
 <style scoped lang="scss">

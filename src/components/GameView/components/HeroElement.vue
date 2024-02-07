@@ -6,14 +6,13 @@
 import type { Hero } from "@/element/role";
 import { useGameElementStyle } from "@/hooks/useStyle";
 import { useHeroStore, type KeywordCodeType } from "@/stores/common/hero";
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, toRef } from 'vue';
 const { hero } = defineProps<{ hero: Hero }>()
-const {
-    heroStyle,
-    backgroundImage,
-    backgroundPositionY,
-    className
-} = $(useGameElementStyle(hero));
+const __$temp_1 = (useGameElementStyle(hero)),
+  heroStyle = toRef(__$temp_1, 'heroStyle'),
+  backgroundImage = toRef(__$temp_1, 'backgroundImage'),
+  backgroundPositionY = toRef(__$temp_1, 'backgroundPositionY'),
+  className = toRef(__$temp_1, 'className');;
 const { operations } = useHeroStore();
 const keywordEvent = (e: KeyboardEvent) => {
     const operationKey = e.code as KeywordCodeType;

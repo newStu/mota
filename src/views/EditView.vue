@@ -60,7 +60,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, toRef } from 'vue';
 import MapAttr from "@/components/EditSelect/MapAttr.vue";
 import CommonSelect from "@/components/EditSelect/CommonSelect.vue";
 import ShortcutPanel from "@/components/EditSelect/ShortcutPanel.vue";
@@ -87,10 +87,20 @@ function goBack() {
     router.go(-1);
 }
 
-const { map, col, row } = $(useMapStore());
-const { renderList, clearRenderList, forwardMap } = $(useElementRenderStore());
-const { hero } = $(useHeroStore());
-const { prevGameLevels, nextGameLevels, gameLevels } = $(useGameStore());
+const __$temp_1 = (useMapStore()),
+  map = toRef(__$temp_1, 'map'),
+  col = toRef(__$temp_1, 'col'),
+  row = toRef(__$temp_1, 'row');;
+const __$temp_2 = (useElementRenderStore()),
+  renderList = toRef(__$temp_2, 'renderList'),
+  clearRenderList = toRef(__$temp_2, 'clearRenderList'),
+  forwardMap = toRef(__$temp_2, 'forwardMap');;
+const __$temp_3 = (useHeroStore()),
+  hero = toRef(__$temp_3, 'hero');;
+const __$temp_4 = (useGameStore()),
+  prevGameLevels = toRef(__$temp_4, 'prevGameLevels'),
+  nextGameLevels = toRef(__$temp_4, 'nextGameLevels'),
+  gameLevels = toRef(__$temp_4, 'gameLevels');;
 const { saveTotalGameInfo } = useLocalStorageSaveGame();
 
 function deleteCurrentLevels() {
@@ -99,7 +109,7 @@ function deleteCurrentLevels() {
         cancelButtonText: "取消",
         type: "warning",
     }).then(() => {
-        clearRenderList();
+        clearRenderList.value();
         save();
         successMessage("删除成功");
     });
@@ -107,13 +117,13 @@ function deleteCurrentLevels() {
 
 
 function save() {
-    saveTotalGameInfo(gameLevels, hero as any, {
-        map: { col, row },
-        renderList: renderList,
-        hero: { x: hero.x, y: hero.y },
-        forwardMap
+    saveTotalGameInfo(gameLevels.value, hero.value as any, {
+        map: { col: col.value, row: row.value },
+        renderList: renderList.value,
+        hero: { x: hero.value.x, y: hero.value.y },
+        forwardMap: forwardMap.value
     });
-    successMessage(`第${gameLevels}关,保存成功`, 500);
+    successMessage(`第${gameLevels.value}关,保存成功`, 500);
 }
 
 useInit(0);

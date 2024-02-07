@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import Map from "../Common/Map.vue";
 import DataPanel from "../Common/DataPanel.vue";
-import { computed } from "vue";
+import { computed, toRef } from 'vue';
 import { useSelectStore } from "@/stores/editMap/elementSelect";
 import { EditElementBlock, EditRoad, UseMouse, MapTag, MapLine } from "./components";
 import type { CommonProperty } from "@/element/common/CommonProperty";
@@ -46,10 +46,11 @@ const { getCurrentSelectedElement } = useSelectStore();
 const element = computed((): any => {
     return getCurrentSelectedElement() || {};
 });
-const { step } = $(useCommonStore());
+const __$temp_1 = (useCommonStore()),
+  step = toRef(__$temp_1, 'step');;
 
 function dealwith(value: number) {
-    return Math.ceil(value / step) - 1;
+    return Math.ceil(value / step.value) - 1;
 }
 
 

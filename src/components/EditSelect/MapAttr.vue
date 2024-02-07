@@ -10,20 +10,24 @@
 </template>
 
 <script setup lang="ts">
-import { watchEffect } from "vue";
+import { watchEffect, toRef } from 'vue';
 import { useMapStore } from "@/stores/common/map";
-const { row, col, updateMapCol, updateMapRow } = $(useMapStore());
+const __$temp_1 = (useMapStore()),
+  row = toRef(__$temp_1, 'row'),
+  col = toRef(__$temp_1, 'col'),
+  updateMapCol = toRef(__$temp_1, 'updateMapCol'),
+  updateMapRow = toRef(__$temp_1, 'updateMapRow');;
 
 
 watchEffect(() => {
-    if (col > 0) {
-        updateMapCol();
+    if (col.value > 0) {
+        updateMapCol.value();
     }
 });
 
 watchEffect(() => {
-    if (row > 0) {
-        updateMapRow();
+    if (row.value > 0) {
+        updateMapRow.value();
     }
 });
 </script>

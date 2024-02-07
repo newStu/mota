@@ -6,10 +6,13 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import { useCommonStore } from '@/stores/common/common';
 
 
-const { step } = $(useCommonStore());
+const __$temp_1 = (useCommonStore()),
+  step = toRef(__$temp_1, 'step');;
 
 function formatToolTip(value: number) {
     return `地图元素尺寸: ${value}px`

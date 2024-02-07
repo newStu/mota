@@ -14,15 +14,16 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import { useTalkStore } from '@/stores/game/talk';
 
 
-const {
-    nextTalk,
-    talkInfo,
-    talkVisible,
-    closeTalk
-} = $(useTalkStore());
+const __$temp_1 = (useTalkStore()),
+  nextTalk = toRef(__$temp_1, 'nextTalk'),
+  talkInfo = toRef(__$temp_1, 'talkInfo'),
+  talkVisible = toRef(__$temp_1, 'talkVisible'),
+  closeTalk = toRef(__$temp_1, 'closeTalk');;
 </script>
 
 <style scoped></style>

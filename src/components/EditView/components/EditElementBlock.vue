@@ -11,18 +11,22 @@ import { useElementStyle } from "@/hooks/useStyle";
 import { useElementRenderStore } from "@/stores/common/elementRender";
 import { useSelectStore } from "@/stores/editMap/elementSelect";
 import { useShortcutStore } from "@/stores/editMap/shortcut";
-import { computed } from "vue";
+import { computed, toRef } from 'vue';
 
 const { element } = defineProps<{
     element: CommonProperty;
 }>();
-const { useClickDelete, selectMapElement } = $(useShortcutStore());
+const __$temp_1 = (useShortcutStore()),
+  useClickDelete = toRef(__$temp_1, 'useClickDelete'),
+  selectMapElement = toRef(__$temp_1, 'selectMapElement');;
 const { removeItem } = useElementRenderStore();
-const { setCurrentSelectedElement, mapActiveElement } = $(useSelectStore());
+const __$temp_2 = (useSelectStore()),
+  setCurrentSelectedElement = toRef(__$temp_2, 'setCurrentSelectedElement'),
+  mapActiveElement = toRef(__$temp_2, 'mapActiveElement');;
 
 
 const active = computed(() => {
-    return mapActiveElement === element.getRenderKey() && selectMapElement;
+    return mapActiveElement.value === element.getRenderKey() && selectMapElement.value;
 });
 
 const dbHandleClick = () => {
@@ -30,16 +34,17 @@ const dbHandleClick = () => {
 };
 
 const handleClick = () => {
-    if (useClickDelete) {
+    if (useClickDelete.value) {
         dbHandleClick();
     }
 
-    if (selectMapElement) {
-        setCurrentSelectedElement(element, true);
+    if (selectMapElement.value) {
+        setCurrentSelectedElement.value(element, true);
     }
 };
 
-const { style } = $(useElementStyle(element)); 
+const __$temp_3 = (useElementStyle(element)),
+  style = toRef(__$temp_3, 'style');; 
 </script>
 
 <style scoped lang="scss">

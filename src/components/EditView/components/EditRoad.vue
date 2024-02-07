@@ -11,7 +11,7 @@ import { useCommonStore } from "@/stores/common/common";
 import { useElementRenderStore } from "@/stores/common/elementRender";
 import { useHeroStore } from "@/stores/common/hero";
 import { useSelectStore } from "@/stores/editMap/elementSelect";
-import { computed } from "vue";
+import { computed, toRef } from 'vue';
 
 const { x, y } = defineProps<{
     x: number;
@@ -55,7 +55,8 @@ function handleMouseDown() {
     window.addEventListener("mouseup", handleMouseup);
 }
 
-const { cssWidthHeight } = $(useCommonStore());
+const __$temp_1 = (useCommonStore()),
+  cssWidthHeight = toRef(__$temp_1, 'cssWidthHeight');;
 </script>
 
 <style scoped lang="scss">

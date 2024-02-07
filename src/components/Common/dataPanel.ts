@@ -1,4 +1,4 @@
-import { computed, reactive, watchEffect } from "vue";
+import { computed, reactive, watchEffect, toRef } from 'vue';
 import { useMapStore } from "@/stores/common/map";
 import { attributeText, type KeyChain, RoleTiles } from "@/constants";
 import type { Role } from "@/element/role/role";
@@ -10,37 +10,38 @@ import { useSelectStore } from "@/stores/editMap/elementSelect";
 const marginHeight = 10;
 
 export function useDataPanelHeight() {
-  const { step } = $(useCommonStore());
+  const __$temp_1 = (useCommonStore()),
+  step = toRef(__$temp_1, 'step');;
   const { col } = useMapStore();
 
   const abilityHeight = computed(() => {
-    return step * 2 + "px";
+    return step.value * 2 + "px";
   });
 
   const marginPx = computed(() => {
-    if (step < 38) return "6px";
-    if (step < 46) return "10px";
+    if (step.value < 38) return "6px";
+    if (step.value < 46) return "10px";
     return "18px";
   });
 
   const paddingPx = computed(() => {
-    if (step < 38) return "4px";
-    if (step < 46) return "10px";
+    if (step.value < 38) return "4px";
+    if (step.value < 46) return "10px";
     return "20px";
   });
 
   // 属性面板 占 3/4
   const attributeHeight = computed(() => {
-    return (col / 24) * 17 * step + "px";
+    return (col / 24) * 17 * step.value + "px";
   });
   // 道具面板 占 1/4
   const propHeight = computed(() => {
-    return (col / 24) * 7 * step - marginHeight + 6 + "px";
+    return (col / 24) * 7 * step.value - marginHeight + 6 + "px";
   });
 
   // 编辑框 占 1/1
   const editBoxHeight = computed(() => {
-    return col * step - marginHeight + 6 + "px";
+    return col * step.value - marginHeight + 6 + "px";
   });
 
   return {
@@ -51,7 +52,7 @@ export function useDataPanelHeight() {
     editBoxHeight,
     marginPx,
     paddingPx,
-    step,
+    step: step.value,
   };
 }
 
@@ -66,11 +67,12 @@ export function useDataPanelValue(props: { element: Role | undefined }) {
   });
 
   const renderPanel = reactive<{ label: string; key: keyof Role }[]>([]);
-  const { isMapElement } = $(useSelectStore());
+  const __$temp_2 = (useSelectStore()),
+  isMapElement = toRef(__$temp_2, 'isMapElement');;
 
   watchEffect(() => {
     let keys = Object.keys(attributeText);
-    if (!isMapElement) {
+    if (!isMapElement.value) {
       keys = keys.filter((item) => !["x", "y"].includes(item));
     }
     const list: { label: string; key: string }[] = [];

@@ -50,6 +50,8 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import { useGameStore } from '@/stores/common/game';
 import { useDataPanelHeight, useDataPanelValue } from '../Common/dataPanel';
 import { RoleTiles, numberToText, TilesImage } from '@/constants';
@@ -57,19 +59,19 @@ import { keyList, abilityList } from "@/render"
 import type { Role } from '@/element/role/role';
 import InputText from './InputText.vue';
 
-const {
-    marginHeightPx,
-    attributeHeight,
-    propHeight,
-    marginPx,
-    paddingPx,
-    abilityHeight
-} = $(useDataPanelHeight());
+const __$temp_1 = (useDataPanelHeight()),
+  marginHeightPx = toRef(__$temp_1, 'marginHeightPx'),
+  attributeHeight = toRef(__$temp_1, 'attributeHeight'),
+  propHeight = toRef(__$temp_1, 'propHeight'),
+  marginPx = toRef(__$temp_1, 'marginPx'),
+  paddingPx = toRef(__$temp_1, 'paddingPx'),
+  abilityHeight = toRef(__$temp_1, 'abilityHeight');;
 
 const props = withDefaults(defineProps<{ element: Role | undefined, isEdit: boolean }>(), {
     isEdit: false
 })
-const { gameLevels } = $(useGameStore());
+const __$temp_2 = (useGameStore()),
+  gameLevels = toRef(__$temp_2, 'gameLevels');;
 const { renderPanel, formModal, keyModal } = useDataPanelValue(props);
 
 </script>

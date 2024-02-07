@@ -9,8 +9,9 @@
 
 <script setup lang="ts">
 import { useShortcutStore } from '@/stores/editMap/shortcut';
-import { computed } from 'vue';
-const { auxiliaryLine } = $(useShortcutStore());
+import { computed, toRef } from 'vue';
+const __$temp_1 = (useShortcutStore()),
+  auxiliaryLine = toRef(__$temp_1, 'auxiliaryLine');;
 const { x, y, step, isInside, rowMax } = defineProps<{ x: number, y: number, isInside: boolean, step: number, rowMax?: number }>()
 
 const rowLine = computed(() => {

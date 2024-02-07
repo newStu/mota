@@ -26,18 +26,16 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from 'vue'
+
 import { useShortcutStore } from "@/stores/editMap/shortcut";
 
-const {
-    selectMapElement,
-    selectElementChange,
-
-    useClickDelete,
-    clickDeleteChange,
-
-    auxiliaryLine,
-
-} = $(useShortcutStore());
+const __$temp_1 = (useShortcutStore()),
+  selectMapElement = toRef(__$temp_1, 'selectMapElement'),
+  selectElementChange = toRef(__$temp_1, 'selectElementChange'),
+  useClickDelete = toRef(__$temp_1, 'useClickDelete'),
+  clickDeleteChange = toRef(__$temp_1, 'clickDeleteChange'),
+  auxiliaryLine = toRef(__$temp_1, 'auxiliaryLine');;
 </script>
 
 <style scoped></style>

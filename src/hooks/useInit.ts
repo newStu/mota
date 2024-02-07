@@ -4,7 +4,7 @@ import { useGameStore } from "@/stores/common/game";
 import { useHeroStore } from "@/stores/common/hero";
 import { useMapStore } from "@/stores/common/map";
 import type { GameLevelType } from "@/typings/constants";
-import { onMounted, watch } from "vue";
+import { onMounted, watch, toRef } from 'vue';
 
 /**
  * 初始化操作
@@ -14,9 +14,13 @@ export function useInit(level: number = 0) {
   const { initMap } = useMapStore();
   const { initOtherRenderList, initForwardMap } = useElementRenderStore();
   const { setHeroPosition, initHero } = useHeroStore();
-  const { setGameLevels, initHeroInfo, levelList, gameLevels } = $(
+  const __$temp_1 = (
     useGameStore()
-  );
+  ),
+  setGameLevels = toRef(__$temp_1, 'setGameLevels'),
+  initHeroInfo = toRef(__$temp_1, 'initHeroInfo'),
+  levelList = toRef(__$temp_1, 'levelList'),
+  gameLevels = toRef(__$temp_1, 'gameLevels');;
 
   function initLevel(levelInfo: GameLevelType) {
     const { map, renderList, hero, forwardMap } = levelInfo || {
@@ -33,16 +37,16 @@ export function useInit(level: number = 0) {
   }
 
   watch(
-    () => gameLevels,
+    () => gameLevels.value,
     () => {
-      initLevel(levelList[gameLevels]);
+      initLevel(levelList.value[gameLevels.value]);
     }
   );
 
   onMounted(() => {
     // 初始化操作
-    if (initHeroInfo) initHero(initHeroInfo);
-    setGameLevels(level);
-    initLevel(levelList[level]);
+    if (initHeroInfo.value) initHero(initHeroInfo.value);
+    setGameLevels.value(level);
+    initLevel(levelList.value[level]);
   });
 }
