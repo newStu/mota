@@ -6,10 +6,11 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [ReactivityTransform(), vue(), vueJsx(),],
-    resolve: {
-        alias: {
-            "@": fileURLToPath(new URL("./src", import.meta.url)),
-        },
+  plugins: [ReactivityTransform(), vue(), vueJsx()],
+  base: "./",
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+  },
 });
